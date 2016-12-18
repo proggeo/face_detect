@@ -4,7 +4,9 @@ import cognitive_face as CF
 import os
 from time import sleep
 
-KEY = ''  # Replace with a valid Subscription Key here.
+KEY = ''  # Replace with a valid Subscription Key in credentials.json.
+with open('credentials.json') as outfile:
+    KEY = json.load(outfile)
 CF.Key.set(KEY)
 
 GROUP_ID = '2'

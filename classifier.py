@@ -5,7 +5,9 @@ import os
 from time import sleep
 import pandas as pd
 
-KEY = ''  # Replace with a valid Subscription Key here.
+KEY = ''  # Replace with a valid Subscription Key in credentials.json.
+with open('credentials.json') as outfile:
+    KEY = json.load(outfile)
 CF.Key.set(KEY)
 
 data = json.load(open('result.json'))
